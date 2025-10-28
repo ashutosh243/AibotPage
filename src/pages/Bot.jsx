@@ -66,7 +66,7 @@ function Bot() {
                 </div>
                 <div className={style.pastConversation} >
                     <a href='/history'>
-                        <button className={style.pastButton}>Past Conversations</button>
+                        <button type='button' className={style.pastButton}>Past Conversations</button>
                     </a>
                 </div>
             </div>
