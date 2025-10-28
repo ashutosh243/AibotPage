@@ -5,7 +5,7 @@ import logo from '../assets/logo.png';
 import Card from '../component/Card';
 import sampleData from '../sampleData.json';
 import Question from '../component/Question';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,7 +20,6 @@ function getBotResponse(data) {
     if (match) {
         return match.response;
     }
-
 
     return "Sorry, Did not understand your query!";
 }
@@ -66,9 +65,9 @@ function Bot() {
                     </a>
                 </div>
                 <div className={style.pastConversation} >
-                    <Link to='/history'>
+                    <a href='/history'>
                         <button type='button' className={style.pastButton}>Past Conversations</button>
-                    </Link>
+                    </a>
                 </div>
             </div>
             <div className={style.main}>
