@@ -25,13 +25,12 @@ function getBotResponse(data) {
 function Bot() {
 
     const [searchText, setSearchText] = useState('');
-    const [chats, setChats] = useState(JSON.parse(localStorage.getItem('chats')));
+    const [chats, setChats] = useState(JSON.parse(localStorage.getItem('chats'))||[]);
     const handleChange = (e) => {
         setSearchText(e.target.value);
     }
     const handleClick = (e) => {
         e.preventDefault();
-
         const userMessage = {
             chat: searchText,
             time: new Date().toLocaleTimeString(),
