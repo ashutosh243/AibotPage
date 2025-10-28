@@ -11,7 +11,7 @@ const PastConversation=()=> {
             <div className={style.headings}>Past Conversations</div>
             <div className={style.conversation}>
                 {
-                   data?.length !== 0 && data.map((chat) => { return <Card chat={chat.chat} time={chat.time} user={chat.user}></Card> })
+                   data?.length !== 0 && data?.map((chat) => { return <Card chat={chat.chat} time={chat.time} user={chat.user}></Card> })
                 }
             </div>
 
