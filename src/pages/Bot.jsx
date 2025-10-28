@@ -45,13 +45,14 @@ function Bot() {
             <div className={style.sidebar}>
                 <div className={style.newchats}>
                  
-                    <button>New Chat <FileChartColumnIncreasing /></button>
+                    <button type='button'>New Chat</button>
+                    <FileChartColumnIncreasing />
                 </div>
             </div>
             <div className={style.main}>
-                <div className={style.headings}>
+                <header className={style.headings}>
                     <h1>Bot AI</h1>
-                </div>
+                </header>
                 <div className={style.chatsContainer}>
                     {
                        chats.length===0&&<div className={style.emptyContainer}><h1>How Can I Help You Today?</h1>
