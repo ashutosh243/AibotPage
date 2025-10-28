@@ -1,0 +1,23 @@
+import React from 'react';
+import styles from './Card.module.css';
+import Avtar from '../assets/avtart.png'
+import Ai from '../assets/logo.png';
+
+const ChatCard = ({ chat, time, user }) => {
+  return (
+    <div className={styles.card}>
+      <div className={styles.avatar}>
+        <img src={user?Avtar:Ai} alt="user avatar" />
+      </div>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <span className={styles.name}>You</span>
+        </div>
+        <div className={styles.message}>{chat}</div>
+        <div className={styles.time}>{time}</div>
+      </div>
+    </div>
+  );
+};
+
+export default ChatCard;

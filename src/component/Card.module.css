@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  background-color: #f5f2ff;
+  border-radius: 15px;
+  padding: 12px 16px;
+  max-width: 100%;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  width: 73vw;
+  margin: auto;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: 600;
+  color: #333;
+}
+
+.message {
+  background: #f0ecff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: #222;
+  margin-top: 4px;
+}
+
+.time {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  color: gray;
+  margin-top: 4px;
+}
