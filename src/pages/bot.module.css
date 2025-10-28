@@ -17,11 +17,16 @@
     background-color: #a99bc5;
 }
 
-.newchats button {
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
+.newchats a {
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-weight: bold;
+    color: black;
 }
 
 .main {
