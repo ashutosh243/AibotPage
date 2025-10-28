@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './pastConversation.module.css';
 import Card from './Card';
+
+
 
 const PastConversation=()=> {
   
     const [data,setData]=useState(JSON.parse(localStorage.getItem('chats')));
     console.log(data);
+    useEffect(()=>{
+            
+    },[]);
+
     return <>
         <div className={style.container}>
             <div className={style.headings}>Past Conversations</div>
