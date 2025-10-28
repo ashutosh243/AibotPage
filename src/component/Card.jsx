@@ -11,9 +11,9 @@ const ChatCard = ({ chat, time, user }) => {
       </div>
       <div className={styles.content}>
         <div className={styles.header}>
-          <span className={styles.name}>You</span>
+          <span className={styles.name}>{user?"You":"Soul AI"}</span>
         </div>
-        <div className={styles.message}>{chat}</div>
+        <p className={styles.message}>{chat}</p>
         <div className={styles.time}>{time}</div>
       </div>
     </div>

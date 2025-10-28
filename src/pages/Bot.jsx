@@ -32,8 +32,9 @@ function Bot() {
     const handleChange = (e) => {   
         setSearchText(e.target.value);
     }
-    const handleClick=()=>{
+    const handleClick=(e)=>{
 
+        e.preventDefault();
         setChats((prev)=>{ return [...prev,{chat:searchText,time:new Date().toLocaleTimeString(),user:true}] });
         setChats((prev)=>{ return [...prev,{chat:getBotResponse(searchText),time:new Date().toLocaleTimeString(),user:false}] });
         setSearchText("");    
@@ -43,13 +44,13 @@ function Bot() {
         <div className={style.container}>
             <div className={style.sidebar}>
                 <div className={style.newchats}>
-                    <h3>New Chat </h3>
-                    <button><FileChartColumnIncreasing /></button>
+                 
+                    <button>New Chat <FileChartColumnIncreasing /></button>
                 </div>
             </div>
             <div className={style.main}>
                 <div className={style.headings}>
-                    <h3>Bot AI</h3>
+                    <h1>Bot AI</h1>
                 </div>
                 <div className={style.chatsContainer}>
                     {
@@ -67,9 +68,11 @@ function Bot() {
                     </div>
                 </div>
                 <div className={style.chatsControl}>
+                    <form onSubmit={handleClick}>
                     <input value={searchText} onChange={handleChange} type="text" placeholder='Message Bot AI...' />
-                    <button type='submit' onClick={handleClick}>Ask</button>
+                    <button type='submit' >Ask</button>
                     <button>Save</button>
+                    </form>
                 </div>
 
             </div>
