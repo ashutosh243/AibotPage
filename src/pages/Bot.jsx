@@ -52,6 +52,10 @@ function Bot() {
         localStorage.setItem('chats', JSON.stringify(chats));
         setChats([]);
     }
+    const handlePast = () => {
+        localStorage.setItem('chats', JSON.stringify(chats));
+
+    }
     return <>
         <div className={style.container}>
             <div className={style.sidebar}>
@@ -65,7 +69,7 @@ function Bot() {
                 </div>
                 <div className={style.pastConversation} >
                     <a href='/history'>
-                        <button type='button' className={style.pastButton}>Past Conversations</button>
+                       <button type='button' className={style.pastButton} onClick={handlePast}>Past Conversations</button>
                     </a>
                 </div>
             </div>
