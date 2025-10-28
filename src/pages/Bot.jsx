@@ -13,7 +13,6 @@ const q = ["Hi,what is weather", "Hi,what is the temperature", "Hi,what is my lo
 function getBotResponse(data) {
 
     const input = data.toLowerCase().trim();
-
     const match = sampleData.find((item) => { return input.includes(item.question.toLowerCase().trim()) }
     );
 
@@ -58,7 +57,7 @@ function Bot() {
             <div className={style.sidebar}>
                 <div className={style.newchats}>
                     <a href='/'>
-                        <button onClick={handleNext} className={style.nextButton}>
+                        <button type='button' onClick={handleNext} className={style.nextButton}>
                             New Chat
                             <FileChartColumnIncreasing />
                         </button>
