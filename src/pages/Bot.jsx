@@ -25,7 +25,7 @@ function getBotResponse(data) {
 function Bot() {
 
     const [searchText, setSearchText] = useState('');
-    const [chats, setChats] = useState([]);
+    const [chats, setChats] = useState(JSON.parse(localStorage.getItem('chats')));
     const handleChange = (e) => {
         setSearchText(e.target.value);
     }

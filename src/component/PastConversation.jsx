@@ -8,9 +8,6 @@ const PastConversation=()=> {
   
     const [data,setData]=useState(JSON.parse(localStorage.getItem('chats')));
     console.log(data);
-    useEffect(()=>{
-            
-    },[]);
 
     return <>
         <div className={style.container}>
