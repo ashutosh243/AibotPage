@@ -5,6 +5,7 @@ import logo from '../assets/logo.png';
 import Card from '../component/Card';
 import sampleData from '../sampleData.json';
 import Question from '../component/Question';
+import {Link} from 'react-router-dom';
 
 
 
