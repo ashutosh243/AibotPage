@@ -5,7 +5,6 @@ import logo from '../assets/logo.png';
 import Card from '../component/Card';
 import sampleData from '../sampleData.json';
 import Question from '../component/Question';
-import { Link } from 'react-router-dom';
 
 
 
@@ -32,24 +31,43 @@ function Bot() {
         setSearchText(e.target.value);
     }
     const handleClick = (e) => {
-
         e.preventDefault();
-        setChats((prev) => { return [...prev, { chat: searchText, time: new Date().toLocaleTimeString(), user: true }] });
-        setChats((prev) => { return [...prev, { chat: getBotResponse(searchText), time: new Date().toLocaleTimeString(), user: false }] });
-        setSearchText("");
-    }
 
+        const userMessage = {
+            chat: searchText,
+            time: new Date().toLocaleTimeString(),
+            user: true
+        };
+
+        const botMessage = {
+            chat: getBotResponse(searchText),
+            time: new Date().toLocaleTimeString(),
+            user: false
+        };
+
+        setChats((prev) => [...prev, userMessage, botMessage]);
+        setSearchText("");
+    };
+
+    const handleNext = () => {
+        localStorage.setItem('chats', JSON.stringify(chats));
+        setChats([]);
+    }
     return <>
         <div className={style.container}>
             <div className={style.sidebar}>
                 <div className={style.newchats}>
-
-                    <a href='/'>New Chat
-                        <FileChartColumnIncreasing />
+                    <a href='/'>
+                        <button onClick={handleNext} className={style.nextButton}>
+                            New Chat
+                            <FileChartColumnIncreasing />
+                        </button>
                     </a>
                 </div>
-                <div className={style.pastConversation}>
-                     <a href='/history'>Past Conversations</a>
+                <div className={style.pastConversation} >
+                    <a href='/history'>
+                        <button className={style.pastButton}>Past Conversations</button>
+                    </a>
                 </div>
             </div>
             <div className={style.main}>
