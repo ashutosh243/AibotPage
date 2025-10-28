@@ -28,17 +28,29 @@
     font-weight: bold;
     color: black;
 }
-
 .main {
     width: 80vw;
     height: 100vh;
     position: relative;
+   
 
 
 }
-
+.pastConversation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+.pastConversation a{
+    border: 1px solid black;
+    background-color: #a99bc5;
+     padding: 10px;
+     border-radius: 5px;
+     cursor: pointer;
+}
 .headings {
-
     position: absolute;
     top: 0;
     width: 80vw;

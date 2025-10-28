@@ -5,6 +5,7 @@ import logo from '../assets/logo.png';
 import Card from '../component/Card';
 import sampleData from '../sampleData.json';
 import Question from '../component/Question';
+import { Link } from 'react-router-dom';
 
 
 
@@ -46,7 +47,9 @@ function Bot() {
                     <a href='/'>New Chat
                         <FileChartColumnIncreasing />
                     </a>
-
+                </div>
+                <div className={style.pastConversation}>
+                     <a href='/history'>Past Conversations</a>
                 </div>
             </div>
             <div className={style.main}>
